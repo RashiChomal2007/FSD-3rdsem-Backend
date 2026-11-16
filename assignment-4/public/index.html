@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Help Desk</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Campus Help Desk</h1>
+
+        <p>
+            Submit and manage your campus-related problems
+            or requests
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- FORM SECTION -->
+
+        <section class="form-section">
+
+            <h2 id="formTitle">
+                Submit a Request
+            </h2>
+
+            <form id="requestForm">
+
+                <input
+                    type="hidden"
+                    id="requestId"
+                >
+
+
+                <label for="studentName">
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="category">
+                    Category
+                </label>
+
+                <select id="category" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Academic">
+                        Academic
+                    </option>
+
+                    <option value="Hostel">
+                        Hostel
+                    </option>
+
+                    <option value="Library">
+                        Library
+                    </option>
+
+                    <option value="Technical">
+                        Technical
+                    </option>
+
+                    <option value="Transport">
+                        Transport
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <label for="description">
+                    Problem Description
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe your problem"
+                    rows="5"
+                    required
+                ></textarea>
+
+
+                <label for="priority">
+                    Priority
+                </label>
+
+                <select id="priority" required>
+
+                    <option value="">
+                        Select Priority
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+
+                <div class="buttons">
+
+                    <button type="submit" id="submitButton">
+                        Submit Request
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelButton"
+                        class="cancel"
+                        hidden
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+
+        <!-- REQUESTS SECTION -->
+
+        <section class="requests-section">
+
+            <h2>
+                Submitted Requests
+            </h2>
+
+            <div id="requestsList"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
